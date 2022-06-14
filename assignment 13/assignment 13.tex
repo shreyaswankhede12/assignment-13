@@ -1,0 +1,83 @@
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 13\\Probability and Random Variables} 
+\author{Shreyas Wankhede}
+\date{\today}
+\institute{IIT Hyderabad}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Question}
+\begin{block}{Question 11.2}
+Find the innovations filter of process $x(t)$ if \\
+$s(\omega)=\dfrac{\omega^4 + 64}{\omega^4 +10\omega^2 +9}$
+\end{block}
+
+
+\end{frame}
+
+
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+The power spectrum S(s) of a regular process can be written as product \\
+\begin{align}
+L(s)L(-s)\hspace{5mm} S(\omega)=|L(j\omega)|^2\nonumber
+\end{align}
+where $L(s)$ is an innovations filter of $x(t)$\\
+A rational spectrum is the ratio of two polynomials in $\omega^2$ because 
+\begin{align}
+S(\omega)&=S(-\omega)\nonumber\\\vspace{4mm}
+S(\omega)&=\dfrac{A(\omega^2)}{B(\omega^2)}\nonumber
+\end{align}
+
+    
+\end{frame} 
+
+
+\begin{frame}{solution}
+\begin{block}{}
+This shows that if s(i) is a root of S(s) , then -S(i) is also a root of S(s).Further more all roots are either real or complex conjugates.From this it follows that the roots of S(s) are symmetrical with respect to $j\omega$ axis.Hence they can be separated in two groups,one with $Re(s)<0$ and right group with $RE(s)>0$.The minimum phase factor or innovation factor is the ratio of two polynomials formed with left roots.
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+Now,
+\begin{align}
+s_x(\omega)&=\dfrac{\omega^4 + 64}{\omega^4 +10\omega^2 +9}\nonumber\\
+&=\dfrac{\omega^2+4\omega+8}{\omega^2+4\omega+3}\hspace{4mm}\dfrac{\omega^2-4\omega+8}{\omega^2-4\omega+3}\nonumber
+\end{align}
+Therefore,\\
+\begin{block}{}
+$ L(s)=\dfrac{\omega^2+4\omega+8}{\omega^2+4\omega+3}$
+\end{block}
+
+\end{frame}
+
+\end{document}
